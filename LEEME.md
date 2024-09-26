@@ -1,10 +1,10 @@
-Como parte de mi certificación en Google Business Intelligence, desarrollé un proyecto para analizar los flujos de ventas de una empresa de comercio electrónico. 
+Como parte de mi certificación en Google Business Intelligence, desarrollé un proyecto para analizar las tendencias de ventas de una empresa de comercio electrónico. 
 
-Utilicé [Google Data Studio] para crear cuadros de mando interactivos que permitieran a los directivos tomar decisiones sobre el análisis de datos. 
+Utilicé [Google Data Studio] para crear paneles interactivos que permitieran a los gerentes tomar decisiones basadas en datos.
+
+Uno de los mayores desafíos fue limpiar y transformar un conjunto de datos muy grande y complejo. 
 
 
-Uno de los mayores desafíos fue limpiar y transformar un conjunto de datos muy grande y complejo.
+Al final, pude identificar patrones de compra estacionales y segmentar a los clientes en función de su comportamiento, lo que permitió a la empresa lanzar campañas de marketing más efectivas. 
 
-Al final, pude identificar patrones de compra estacionales y segmentar a los clientes en función de su comportamiento o, lo que permitió a la empresa lanzar campañas de marketing más efectivas. 
-
-Este proyecto me permitió fortalecer mis habilidades en SQL, Python y visualización de datos, y me preparó para asumir roles de análisis de datos en empresas de cualquier industria.
+Este proyecto me permitió fortalecer mis habilidades en SQL, Python y visualización de datos, y me preparó para asumir roles de analítica de datos en empresas de cualquier industria.
