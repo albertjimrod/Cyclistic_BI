@@ -1,0 +1,287 @@
+Cyclistic NYC zip codes:
+	zip				INTEGER	NULLABLE
+	borough				STRING	NULLABLE
+	neighborhood			STRING	NULLABLE
+	
+adjacent_counties:
+	county				STRING	NULLABLE
+	state				STRING	NULLABLE
+	county_fips_code		STRING	NULLABLE
+	neighbors			STRING	REPEATED
+	neighbors_state			STRING	REPEATED
+	neighbors_fips_code		STRING	REPEATED
+	
+adjacent_states:
+	state				STRING	NULLABLE
+	state_name			STRING	NULLABLE
+	state_fips_code			STRING	NULLABLE
+	neighbors_state			STRING	REPEATED
+	neighbors_fips_code		STRING	REPEATED
+	
+cbsa:
+	geo_id				STRING	NULLABLE
+	csa_geo_id			STRING	NULLABLE
+	cbsa_fips_code			STRING	NULLABLE
+	name				STRING	NULLABLE
+	lsad_name			STRING	NULLABLE
+	lsad_code			STRING	NULLABLE
+	msa_indicator			STRING	NULLABLE
+	mtfcc_feature_class_code	STRING	NULLABLE
+	area_land_meters		FLOAT	NULLABLE
+	area_water_meters		FLOAT	NULLABLE
+	internal_point_latitude		FLOAT	NULLABLE
+	internal_point_longitude	FLOAT	NULLABLE
+	internal_point_geom		GEOGRAPHY NULLABLE
+	cbsa_geom			GEOGRAPHY NULLABLE
+	
+	
+citibike_stations:
+	station_id			STRING	NULLABLE
+	name				STRING	NULLABLE
+	short_name			STRING	NULLABLE
+	latitude			FLOAT	NULLABLE
+	longitude			FLOAT	NULLABLE
+	region_id			INTEGER	NULLABLE
+	rental_methods			STRING	NULLABLE
+	capacity			INTEGER	NULLABLE
+	eightd_has_key_dispenser	BOOLEAN	NULLABLE
+	num_bikes_available		INTEGER	NULLABLE
+	num_bikes_disabled		INTEGER	NULLABLE
+	num_docks_available		INTEGER	NULLABLE
+	num_docks_disabled		INTEGER	NULLABLE
+	is_installed			BOOLEAN	NULLABLE
+	is_renting			BOOLEAN	NULLABLE
+	is_returning			BOOLEAN	NULLABLE
+	eightd_has_available_keys	BOOLEAN	NULLABLE
+	last_reported	TIMESTAMP	NULLABLE
+	
+
+citibike_trips:
+	tripduration		INTEGER	NULLABLE
+	starttime		DATETIMENULLABLE
+	stoptime		DATETIMENULLABLE
+	start_station_id	INTEGER	NULLABLE*
+	start_station_name	STRING	NULLABLE
+	start_station_latitude	FLOAT	NULLABLE
+	start_station_longitude	FLOAT	NULLABLE
+	end_station_id		INTEGER	NULLABLE*
+	end_station_name	STRING	NULLABLE
+	end_station_latitude	FLOAT	NULLABLE
+	end_station_longitude	FLOAT	NULLABLE
+	bikeid			INTEGER	NULLABLE*
+	usertype		STRING	NULLABLE
+	birth_year		INTEGER	NULLABLE
+	gender			STRING	NULLABLE
+	customer_plan		STRING	NULLABLE
+	
+cnecta:
+	geo_id				STRING	NULLABLE
+	cnecta_fips_code		STRING	NULLABLE
+	name				STRING	NULLABLE
+	name_lsad			STRING	NULLABLE
+	lsad				STRING	NULLABLE
+	mtfcc_feature_class_code	STRING	NULLABLE
+	area_land_meters		INTEGER	NULLABLE
+	area_water_meters		INTEGER	NULLABLE
+	int_point_lat			FLOAT	NULLABLE
+	int_point_lon			FLOAT	NULLABLE
+	cnecta_geom			GEOGRAPHY	NULLABLE
+	
+
+coastline:
+	name				STRING	NULLABLE
+	coastline_geom			GEOGRAPHY	NULLABLE
+	
+congress_district_115:
+	geo_id				STRING	NULLABLE
+	state_fips_code			STRING	NULLABLE
+	district_fips_code		STRING	NULLABLE
+	lsad_name			STRING	NULLABLE
+	lsad_code			STRING	NULLABLE
+	congress_session		STRING	NULLABLE
+	mtfcc_feature_class_code	STRING	NULLABLE
+	functional_status		BOOLEAN	NULLABLE
+	area_land_meters		INTEGER	NULLABLE
+	area_water_meters		INTEGER	NULLABLE
+	int_point_lat			FLOAT	NULLABLE
+	int_point_lon			FLOAT	NULLABLE
+	int_point_geom			GEOGRAPHY	NULLABLE
+	district_geom			GEOGRAPHY	NULLABLE
+
+congress_district_116:
+	geo_id				STRING	NULLABLE
+	state_fips_code			STRING	NULLABLE
+	district_fips_code		STRING	NULLABLE
+	lsad_name			STRING	NULLABLE
+	lsad_code			STRING	NULLABLE
+	congress_session		STRING	NULLABLE
+	mtfcc_feature_class_code	STRING	NULLABLE
+	functional_status		BOOLEAN	NULLABLE
+	area_land_meters		INTEGER	NULLABLE
+	area_water_meters		INTEGER	NULLABLE
+	int_point_lat			FLOAT	NULLABLE
+	int_point_lon			FLOAT	NULLABLE
+	int_point_geom			GEOGRAPHY	NULLABLE
+	district_geom			GEOGRAPHY	NULLABLE
+	
+counties:
+	geo_id				STRING	NULLABLE
+	state_fips_code			STRING	NULLABLE
+	county_fips_code		STRING	NULLABLE
+	county_gnis_code		STRING	NULLABLE
+	county_name			STRING	NULLABLE
+	lsad_name			STRING	NULLABLE
+	lsad_code			STRING	NULLABLE
+	fips_class_code			STRING	NULLABLE
+	mtfcc_feature_class_code	STRING	NULLABLE
+	csa_fips_code			STRING	NULLABLE
+	cbsa_fips_code			STRING	NULLABLE
+	met_div_fips_code		STRING	NULLABLE
+	functional_status		STRING	NULLABLE
+	area_land_meters		INTEGER	NULLABLE
+	area_water_meters		INTEGER	NULLABLE
+	int_point_lat			FLOAT	NULLABLE
+	int_point_lon			FLOAT	NULLABLE
+	int_point_geom			GEOGRAPHY	NULLABLE
+	county_geom			GEOGRAPHY	NULLABLE
+	
+csa:
+	geo_id				STRING	NULLABLE
+	csa_code			STRING	NULLABLE
+	name				STRING	NULLABLE
+	lsad_name			STRING	NULLABLE
+	msa_lsad_code			STRING	NULLABLE
+	mtfcc_feature_class_code	STRING	NULLABLE
+	area_land_meters		FLOAT	NULLABLE
+	area_water_meters		FLOAT	NULLABLE
+	internal_point_lon		FLOAT	NULLABLE
+	internal_point_lat		FLOAT	NULLABLE
+	internal_point_geom		GEOGRAPHY	NULLABLE
+	csa_geom			GEOGRAPHY	NULLABLE
+	
+gsod2015:
+	stn		STRING	NULLABLE
+	wban		STRING	NULLABLE
+	year		STRING	NULLABLE
+	mo		STRING	NULLABLE
+	da		STRING	NULLABLE
+	temp		FLOAT	NULLABLE
+	count_temp	INTEGER	NULLABLE
+	dewp		FLOAT	NULLABLE
+	count_dewp	INTEGER	NULLABLE
+	slp		FLOAT	NULLABLE
+	count_slp	INTEGER	NULLABLE
+	stp		FLOAT	NULLABLE
+	count_stp	INTEGER	NULLABLE
+	visib		FLOAT	NULLABLE
+	count_visib	INTEGER	NULLABLE
+	wdsp		STRING	NULLABLE
+	count_wdsp	STRING	NULLABLE
+	mxpsd		STRING	NULLABLE
+	gust		FLOAT	NULLABLE
+	max		FLOAT	NULLABLE
+	flag_max	STRING	NULLABLE
+	min		FLOAT	NULLABLE
+	flag_min	STRING	NULLABLE
+	prcp		FLOAT	NULLABLE
+	flag_prcp	STRING	NULLABLE
+	sndp		FLOAT	NULLABLE
+	fog		STRING	NULLABLE
+	rain_drizzle	STRING	NULLABLE
+	snow_ice_pellets	STRING	NULLABLE
+	hail		STRING	NULLABLE
+	thunder		STRING	NULLABLE
+	tornado_funnel_cloud	STRING	NULLABLE
+	
+metropolitan_divisions:
+	geo_id			STRING	NULLABLE
+	csa_code		STRING	NULLABLE
+	cbsa_code		STRING	NULLABLE
+	metdiv_code		STRING	NULLABLE
+	name			STRING	NULLABLE
+	lsad_name		STRING	NULLABLE
+	lsad_code		STRING	NULLABLE
+	mtfcc_feature_class_code	STRING	NULLABLE
+	area_land_meters	FLOAT	NULLABLE
+	area_water_meters	FLOAT	NULLABLE
+	internal_point_latitude	FLOAT	NULLABLE
+	internal_point_longitude	FLOAT	NULLABLE
+	internal_point_geom	GEOGRAPHY	NULLABLE
+	metdiv_geom		GEOGRAPHY	NULLABLE
+
+	
+national_outline:
+	us_outline_geom		GEOGRAPHY	NULLABLE
+	aff_geo_id		STRING	NULLABLE
+	geo_id			STRING	NULLABLE
+	name			STRING	NULLABLE
+
+nws_forecast_regions:
+	state			STRING	NULLABLE
+	cwa			STRING	NULLABLE
+	time_zone		STRING	NULLABLE
+	fe_area			STRING	NULLABLE
+	zone			STRING	NULLABLE
+	name			STRING	NULLABLE
+	state_zone		STRING	NULLABLE
+	lon			FLOAT	NULLABLE
+	lat			FLOAT	NULLABLE
+	shortname		STRING	NULLABLE
+	shape_geometry		GEOGRAPHY	NULLABLE
+	
+railways:
+	geo_id			INTEGER	NULLABLE
+	full_name		STRING	NULLABLE
+	mtfcc_feature_class_codeSTRING	NULLABLE
+	railway_geom		STRING	NULLABLE
+
+states:
+	geo_id			STRING	NULLABLE
+	region_code		STRING	NULLABLE
+	division_code		STRING	NULLABLE
+	state_fips_code		STRING	NULLABLE
+	state_gnis_code		STRING	NULLABLE
+	state			STRING	NULLABLE
+	state_name		STRING	NULLABLE
+	lsad_code		STRING	NULLABLE
+	mtfcc_feature_class_code	STRING	NULLABLE
+	functional_status	STRING	NULLABLE
+	area_land_meters	INTEGER	NULLABLE
+	area_water_meters	INTEGER	NULLABLE
+	int_point_lat		FLOAT	NULLABLE
+	int_point_lon		FLOAT	NULLABLE
+	int_point_geom		GEOGRAPHY	NULLABLE
+	state_geom		GEOGRAPHY	NULLABLE
+	
+urban_areas:
+	geo_id			STRING	NULLABLE
+	urban_area_code		STRING	NULLABLE
+	name			STRING	NULLABLE
+	lsad_name		STRING	NULLABLE
+	area_lsad_code		STRING	NULLABLE
+	mtfcc_feature_class_code	STRING	NULLABLE
+	type			STRING	NULLABLE
+	functional_status	STRING	NULLABLE
+	area_land_meters	FLOAT	NULLABLE
+	area_water_meters	FLOAT	NULLABLE
+	internal_point_lon	FLOAT	NULLABLE
+	internal_point_lat	FLOAT	NULLABLE
+	internal_point_geom	GEOGRAPHY	NULLABLE
+	urban_area_geom		GEOGRAPHY	NULLABLE
+	
+zip_codes:
+	zip_code		STRING	NULLABLE
+	city			STRING	NULLABLE
+	county			STRING	NULLABLE
+	state_fips_code		STRING	NULLABLE
+	state_code		STRING	NULLABLE
+	state_name		STRING	NULLABLE
+	fips_class_code		STRING	NULLABLE
+	mtfcc_feature_class_code	STRING	NULLABLE
+	functional_status	STRING	NULLABLE
+	area_land_meters	FLOAT	NULLABLE
+	area_water_meters	FLOAT	NULLABLE
+	internal_point_lat	FLOAT	NULLABLE
+	internal_point_lon	FLOAT	NULLABLE
+	internal_point_geom	GEOGRAPHY	NULLABLE
+	zip_code_geom		GEOGRAPHY	NULLABLE
